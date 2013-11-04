@@ -9,13 +9,13 @@ ul, ol{list-style-position:inside}
 #outer{position:relative; width:900px; margin:0 auto; min-height:100%; background:#fff}
 * html #outer{height:100%}
 /*Header*/
-#header{position:relative; padding:45px 30px 50px 30px; background:#d7e1eb; border-bottom:solid 5px #0c3961}
+#header{position:relative; padding:45px 30px 50px 30px; background:#d7e1eb; border-bottom:solid 5px #0c3961; text-align:center}
 #header h1{font-size:2em; font-style:italic; color:#235a8b}
 #header h1 span.jg_red{color:#b90f14}
 #header h1 span.jg_green{color:#90b141}
 #header h1 span.jg_yellow{color:#e9a407}
 #header h1 span.jg_blue{color:#549bdd}
-#header h2{position:absolute; right:10px; bottom:3px; font-size:1em; font-weight:normal; color:#00294d}
+#header h2{text-align:center; padding-top:10px; font-size:1em; font-weight:normal; color:#00294d}
 /*Content*/
 #content{padding:30px}
 #content h2{color:#8b2323; font-size:1.4em; padding-bottom:10px}

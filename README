@@ -1,0 +1,22 @@
+Jeegoocontext is a jQuery plugin that allows for multiple custom context menus (pop-up menus) to exist on a single page. 
+The plugin is able to transform any unordered list appended to the body into a multi-level, intelligently positioned styled context menu via a single call.
+
+JeeGooContext is released under the MIT license. A demo is available at http://www.tweego.nl/jeegoocontext
+
+=============================================================================================
+# Release Notes         						   November 4, 2013 #
+=============================================================================================
+
+# Version 2.0.0
+
+Changes:
+
+- Removed livequery dependency.
+- Removed $.fn.nojeegoocontext.
+- Removed "livequery" option.
+- Added "wrapper" option.
+- Made compatible with latest jquery.
+  
+
+
+

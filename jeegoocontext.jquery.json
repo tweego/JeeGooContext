@@ -1,0 +1,28 @@
+﻿{
+    "name": "jeegoocontext",
+    "version": "2.0.0",
+    "title": "JeeGooContext",
+    "description": "jQuery contextmenu plugin",
+    "keywords": [
+        "context menu",
+        "right-click menu",
+        "pop-up menu",
+    ],
+    "author": {
+        "name": "Erik van den Berg",
+        "url": "http://www.tweego.nl/auteurs/erik_van_den_berg"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/tweego/JeeGooContext/blob/2.0.0/MIT-License.txt"
+        }
+    ],
+    "bugs": "https://github.com/tweego/JeeGooContext/issues",
+    "homepage": "http://www.tweego.nl/jeegoocontext",
+    "docs": "http://www.tweego.nl/jeegoocontext/notes/v200",
+    "demo": "http://www.tweego.nl/jeegoocontext/demo",
+    "dependencies": {
+        "jquery": ">=1.4.2"
+    }
+}
