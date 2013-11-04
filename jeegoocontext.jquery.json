@@ -1,8 +1,8 @@
 ﻿{
-    "name": "jeegoocontext",
+    "name": "JeeGooContext",
     "version": "2.0.0",
     "title": "JeeGoo Context",
-    "description": "jQuery contextmenu plugin",
+    "description": "jQuery contextmenu plugin, powerful and highly extensible jQuery context menu.",
     "keywords": [
         "contextmenu",
 		"context-menu",
