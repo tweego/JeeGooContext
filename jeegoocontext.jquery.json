@@ -4,9 +4,11 @@
     "title": "JeeGoo Context",
     "description": "jQuery contextmenu plugin",
     "keywords": [
-        "context menu",
-        "right-click menu",
-        "pop-up menu",
+        "contextmenu",
+		"context-menu",
+        "right-click-menu",
+        "menu",
+		"navigation"
     ],
     "author": {
         "name": "Erik van den Berg",
