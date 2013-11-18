@@ -1,13 +1,16 @@
-﻿// Copyright (c) 2009 - 2010 Erik van den Berg (http://www.planitworks.nl/jeegoocontext)
-// Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) 
-// and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
-//
-// Contributors:
-// Denis Evteev
-// Roman Imankulov (www.netangels.ru)
-//
-// Version: 1.3
-// Requires jQuery 1.3.2+
+﻿/*!
+ * Copyright (c) 2009 - 2013 Erik van den Berg (http://www.tweego.nl/jeegoocontext)
+ * Licensed under MIT (http://www.opensource.org/licenses/mit-license.php) license.
+ * Consider linking back to author's homepage: http://www.tweego.nl
+ *
+ * Contributors:
+ * Denis Evteev
+ * Roman Imankulov (www.netangels.ru)
+ * Julian Verdurmen
+ *
+ * Version: 2.0
+ * Requires jQuery 1.4.2+
+ */
 (function($){
     var _global;
     var _menus;
@@ -111,7 +114,6 @@
         if(!_global.activeClass)_global.activeClass = 'active';
 		
 		// Default undefined:
-		// livequery, bool
 	    // event, string
 		// openBelowContext, bool
 		// ignoreWidthOverflow, bool
@@ -126,6 +128,7 @@
             submenuClass: 'submenu',
             separatorClass: 'separator',
             operaEvent: 'ctrl+click',
+            wrapper: 'body',
             fadeIn: 200,
             delay: 300,
             keyDelay: 100,
@@ -143,7 +146,7 @@
         _menus[id].allContext = this.selector;
         
         // Add mouseover and click handlers to the menu's items.
-        $('#' + id).find('li')[_menus[id].livequery ? 'expire' : 'unbind']('.jeegoocontext')[_menus[id].livequery ? 'livequery' : 'bind']('mouseover.jeegoocontext', function(e){  
+        $('#' + id).delegate('li', 'mouseover.jeegoocontext', function(e){  
 
             var $this = _menus[id].currentHover = $(this);
     
@@ -212,8 +215,8 @@
                 $submenu.fadeIn(_menus[id].fadeIn);   
             }
             e.stopPropagation(); 
-        })[_menus[id].livequery ? 'livequery' : 'bind']('click.jeegoocontext', function(e){
-        
+        }).delegate('li', 'click.jeegoocontext', function(e){
+
             // Invoke onSelect callback if set, 'this' refers to the selected listitem.
             // Discontinue default behavior if callback returns false.
             if(_menus[id].onSelect)
@@ -260,7 +263,7 @@
         }
         
         // Add menu invocation handler to the context.
-        return this[_menus[id].livequery ? 'livequery' : 'bind'](eventType, function(e){
+        return $(_menus[id].wrapper).delegate(_menus[id].allContext, eventType, function(e){
             // Check for the modifier if any.
 			if (typeof _menus[id].modifier == 'string' && !e[_menus[id].modifier]) return;
             
@@ -436,10 +439,5 @@
             return false;
         });      
     }; 
-	
-	// Unbind context from context menu.
-    $.fn.nojeegoocontext = function(){ 
-        this.unbind('.jeegoocontext');
-    };
        	   
 })(jQuery);
